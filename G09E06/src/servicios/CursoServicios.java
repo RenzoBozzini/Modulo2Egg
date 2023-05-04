@@ -28,6 +28,7 @@ alumno.
         String[] alumno = new String[5];
 
         for (int i = 0; i < matematicas.getAlumnos().length; i++) {
+            System.out.println("Ingrese el nombre del alumno");
             alumno[i] = leer.next();
         }
         matematicas.setAlumnos(alumno); //no se puede desfragmentar un set

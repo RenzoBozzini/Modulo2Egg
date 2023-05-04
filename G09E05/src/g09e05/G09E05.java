@@ -5,6 +5,10 @@
  */
 package g09e05;
 
+import entidades.Persona;
+import java.util.Scanner;
+import servicios.PersonaServicios;
+
 /**
  *Implemente la clase Persona en el paquete entidades. Una persona tiene
 un nombre y una fecha de nacimiento (Tipo Date), constructor vacío,
@@ -28,6 +32,18 @@ public class G09E05 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner leer = new Scanner(System.in);
+        PersonaServicios ps = new PersonaServicios();
+        Persona p = ps.crearPersona();
+        System.out.println("Ingrese una edad para saber si la persona es menor");
+        System.out.println(ps.menorQue(p, leer.nextInt()));
+        System.out.println("La edad de la persona es: "+ ps.calcularEdad(p));
+  
+        ps.mostrarPersona(p);
+        
+        
+        
+        
     }
     
 }

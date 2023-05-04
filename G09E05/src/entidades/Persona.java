@@ -24,8 +24,8 @@ deseada.
  * @author RENZO
  */
 public class Persona {
-    String nombre;
-    Date fecha;
+    private String nombre;
+    private Date fecha;
 
     public Persona() {
     }

@@ -30,7 +30,6 @@ números aleatorios.
      pantalla.
      */
     public void mostrar(double[] vector) {
-
         for (int i = 0; i < vector.length; i++) {
             System.out.print(vector[i] + " ");
         }
@@ -39,6 +38,14 @@ números aleatorios.
     3) Método ordenar recibe un arreglo por parámetro y lo ordena de
     mayor a menor.
     */
-    
+    public void ordenar(double [] vector){
+        Arrays.sort(vector);        
+    }
+    /*
+    4) Método inicializarB copia los primeros 10 números del arreglo A en el
+arreglo B. Luego llenar las últimas 10 posiciones del arreglo B con 0.5.
+En el Main nuevamente: inicializar A, mostrar A, ordenar A, inicializar B,
+mostrar A y B.
+    */
 
 }

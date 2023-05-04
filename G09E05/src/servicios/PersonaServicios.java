@@ -6,6 +6,7 @@
 package servicios;
 
 import entidades.Persona;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -27,11 +28,36 @@ deseada.
 public class PersonaServicios {
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
     
-    private void crearPersona(){
+    public Persona crearPersona(){
+        Persona individuo = new Persona();
         System.out.println("Ingrese nombre de persona");
-        String nombre = leer.next();
-        Sout
+        individuo.setNombre(leer.next());
+        System.out.println("Ingrese dia de nacimiento");
+        int dia = leer.nextInt();
+        System.out.println("Ingrese mes de nacimiento");
+        int mes = leer.nextInt();
+        System.out.println("Ingrese año de nacimiento");
+        int anio = leer.nextInt();
         
+        Date fecha = new Date(anio-1900,mes-1,dia);
+        individuo.setFecha(fecha);
+               
+        return individuo;        
     }
+    
+    public int calcularEdad(Persona p){
+        Date fechaActual = new Date();
+        return (fechaActual.getYear()-p.getFecha().getYear());
+    }
+    
+    public boolean menorQue(Persona p, int edad){
+      return calcularEdad(p)<edad;
+    }
+    
+    public void mostrarPersona(Persona p){
+        System.out.println("Nombre: " + p.getNombre());
+        System.out.println("Fecha nacimiento" + p.getFecha());
+    }
+    
     
 }
