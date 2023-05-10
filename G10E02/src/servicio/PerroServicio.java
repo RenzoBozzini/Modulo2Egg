@@ -50,12 +50,12 @@ public class PerroServicio {
     public void buscoYelimino(String r) {
         // Uso el iterador, porque si uso FOREACH da error
         Iterator<Perro> ite = listaDePerros.iterator();
-        while (ite.hasNext()) {
-            if (ite.next().getRaza().equals(r)) {
+        while (ite.hasNext()) { //                     ite
+            if (ite.next().getRaza().equals(r)) { // [, objeto 1, obj 3}
                 ite.remove();
             }
         }
-    }
+    } 
 
     public void ordenaRazas() {
         //Estructura modelo
