@@ -26,7 +26,6 @@ public class G10E03 {
         String n = leer.next();
         System.out.println(as.notaFinal(n));
         
-        
     }
     
 }
