@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="reparteNaipe">
+  <ClassDiagramComponents>
+    <Class name="Servicio" package="" visibility="public" xPosition="530.0" yPosition="49.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="barajar" returnType="void" visibility="public"/>
+        <Method name="siguienteCarta" returnType="void" visibility="public"/>
+        <Method name="cartasDisponibles" returnType="void" visibility="public"/>
+        <Method name="darCartas" returnType="void" visibility="public"/>
+        <Method name="cartasMonton" returnType="void" visibility="public"/>
+        <Method name="mostrarBaraja" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Palos" package="" visibility="public" xPosition="20.0" yPosition="49.0">
+      <Literals>
+        <Literal name="ESPADA"/>
+        <Literal name="BASTO"/>
+        <Literal name="COPA"/>
+        <Literal name="ORO"/>
+      </Literals>
+    </Enum>
+    <Class name="Carta" package="" visibility="public" xPosition="255.0" yPosition="49.0">
+      <Fields>
+        <Field name="numero" type="int" visibility="private"/>
+        <Field name="palo" type="Palos" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Servicio" target="Carta" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="LinkedList"/>
+    <HasRelation name="tiene" source="Carta" target="Palos" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="LinkedList"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
