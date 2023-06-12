@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="G11E03">
+  <ClassDiagramComponents>
+    <Class name="Carta" package="entidad" visibility="public" xPosition="16.0" yPosition="73.0">
+      <Fields>
+        <Field name="numero" type="int" visibility="private"/>
+        <Field name="palo" type="Palos" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="numero"/>
+          <Argument type="Palos" name="palo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumero" returnType="int" visibility="public"/>
+        <Method name="setNumero" returnType="void" visibility="public">
+          <Argument type="int" name="numero"/>
+        </Method>
+        <Method name="getPalo" returnType="Palos" visibility="public"/>
+        <Method name="setPalo" returnType="void" visibility="public">
+          <Argument type="Palos" name="palo"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="G11E03" package="g11e03" visibility="public" xPosition="550.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Servicio" package="servicio" visibility="public" xPosition="534.0" yPosition="149.0">
+      <Fields>
+        <Field name="mazo" type="List&lt;Carta&gt;" visibility="package"/>
+        <Field name="descarte" type="List&lt;Carta&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="armarMazo" returnType="void" visibility="public">
+          <Argument type="List&lt;Carta&gt;" name="mazo"/>
+        </Method>
+        <Method name="barajar" returnType="void" visibility="public"/>
+        <Method name="siguienteCarta" returnType="void" visibility="public"/>
+        <Method name="cartasDisponibles" returnType="void" visibility="public"/>
+        <Method name="darCartas" returnType="void" visibility="public">
+          <Argument type="int" name="cant"/>
+        </Method>
+        <Method name="cartasMonton" returnType="void" visibility="public"/>
+        <Method name="mostrarBaraja" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Palos" package="entidad" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Literals>
+        <Literal name="ESPADA"/>
+        <Literal name="BASTO"/>
+        <Literal name="COPA"/>
+        <Literal name="ORO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="servicio.Servicio" target="entidad.Carta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="descarte" source="servicio.Servicio" target="entidad.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Carta&gt;"/>
+    <UseRelation source="entidad.Carta" target="entidad.Palos" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mazo" source="servicio.Servicio" target="entidad.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Carta&gt;"/>
+    <HasRelation name="palo" source="entidad.Carta" target="entidad.Palos" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

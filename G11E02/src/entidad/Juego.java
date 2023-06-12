@@ -28,7 +28,7 @@ public class Juego {
     private List<Jugador> jugadores;
     private Revolver r;
     
-    public void llenarJuego(ArrayList<Jugador>jugadores, Revolver r){
+    public void llenarJuego(){
         System.out.println("Ingrese el numero de jugadores (de 2 a 6)");
         int cant = leer.nextInt();
         if (cant < 2) {
@@ -48,7 +48,7 @@ public class Juego {
         System.out.println(jugadores.toString());
     }
     
-    public void ronda(ArrayList<Jugador>jugadores){
+    public void ronda(){
         //System.out.println(jugadores.toString());
         for (Jugador player : jugadores) {            
             if (player.disparo(r)) {
@@ -56,7 +56,7 @@ public class Juego {
                 System.out.println(player);
                 break;
             }else{
-                ronda(jugadores);
+                ronda();
             }
         }
         

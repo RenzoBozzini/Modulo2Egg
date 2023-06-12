@@ -11,20 +11,15 @@ public class Servicio {
     List <Carta> mazo = new ArrayList<>();
     List <Carta> descarte = new ArrayList<>();
     
-    public void armarMazo(List <Carta> mazo){
-        
+    public void armarMazo(List <Carta> mazo){        
             for (int j = 0; j < 12; j++) {
-                if (j < 8 || j > 9) {
-                    
-              
+                if (j < 8 || j > 9) {              
                     mazo.add(new Carta(j+1, Palos.BASTO));
                     mazo.add(new Carta(j+1, Palos.ESPADA));
                     mazo.add(new Carta(j+1, Palos.ORO));
                     mazo.add(new Carta(j+1, Palos.COPA));
-                    
                 }
-            }
-                    
+            }                    
     }
     
     public void barajar() {
@@ -46,13 +41,11 @@ public class Servicio {
         if (cant < mazo.size()) {
             for (int i = 0; i < cant; i++) {
                 siguienteCarta();
-                
             }
         }else{
             System.out.println("No hay mas cartas en el mazo");
         }    
         System.out.println("Se dieron " + cant + " cartas");
-        
     }
 
     public void cartasMonton() {

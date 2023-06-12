@@ -28,7 +28,7 @@ public class Jugador {
     public Jugador(int id, String nombre, boolean mojado) {
         this.id = id;
         this.nombre = nombre;
-        this.mojado = false;
+        this.mojado = mojado;
     }
 
     public int getId() {
@@ -52,7 +52,7 @@ public class Jugador {
     }
 
     public void setMojado(boolean mojado) {
-        this.mojado = false;
+        this.mojado = mojado;
     }
     
     public boolean disparo (Revolver r){
